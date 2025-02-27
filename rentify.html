@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propty Stock - Project Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#121212',
+                        foreground: '#ffffff',
+                        accent: '#e0f11f',
+                        muted: '#656565',
+                        card: '#1f1f1f',
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-background/90 backdrop-blur-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4">
+            <div class="flex justify-end gap-8 text-sm">
+                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">About</a>
+                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">Project</a>
+                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">Education</a>
+                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">Contact</a>
+                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Back Button -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-8">
+            <a href="index.html" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+
+        <!-- Project Content -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-12">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold italic mb-16 animate-fade-in">
+               Rentify
+            </h1>
+
+            <section class="mb-20 animate-fade-in">
+                <h2 class="text-accent text-sm uppercase mb-6">Overview</h2>
+                <p class="text-[#d0d0d0] max-w-3xl text-lg leading-relaxed">
+                    Is a web application designed to streamline tenant screening for property owners by providing reliable client verification and credit assessment (landlord verification and apartment verification). It allows property owners to verify tenant identities using BVN checks and assess their financial reliability through detailed credit reports. Authify offers a tiered subscription model to cater to various needs, with features including verification certificates and a comprehensive notification system to keep users updated. This platform aims to simplify the tenant screening process and support informed decision-making.
+                </p>
+            </section>
+
+            <!-- Project Screenshots -->
+            <section class="mb-20 animate-fade-in">
+                <img src="assets/rentify1.png" alt="Rentify main screenshot" class="w-full aspect-[2/1] object-cover rounded-lg mb-20" />
+            </section>
+
+            <section class="mb-20 animate-fade-in">
+                <p class="text-[#d0d0d0] max-w-3xl text-lg leading-relaxed mb-12">
+                    Is a web application designed to streamline tenant screening for property owners by providing reliable client verification and credit assessment (landlord verification and apartment verification). It allows property owners to verify tenant identities using BVN checks and assess their financial reliability through detailed credit reports.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2">
+                        <img src="/placeholder.svg?height=400&width=800" alt="Rentify dashboard view" class="w-full aspect-[2/1] object-cover rounded-lg" />
+                    </div>
+                    <div class="md:col-span-1">
+                        <img src="/placeholder.svg?height=400&width=400" alt="Rentify mobile view" class="w-full aspect-square object-cover rounded-lg" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="mb-20 animate-fade-in">
+                <h2 class="text-accent text-sm uppercase mb-6">Contact</h2>
+                <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+                    <p class="text-[#d0d0d0] max-w-sm">
+                        Looking to start a project? Feel free to contact me.
+                    </p>
+                    <div class="text-right">
+                        <p class="text-muted text-sm mb-2">Surulere, Lagos, Nigeria</p>
+                        <a href="mailto:tejumolamof@gmail.com" class="text-white hover:text-accent transition-colors">
+                            tejumolamof@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-8 mb-12">
+                <a href="#" class="text-white hover:text-accent transition-colors">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-accent transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-accent transition-colors">
+                    <i class="fab fa-behance text-xl"></i>
+                </a>
+            </div>
+
+            <!-- Back to Top -->
+            <div class="flex justify-center mb-8">
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                        class="px-6 py-2 bg-accent text-background rounded-full hover:opacity-90 transition-opacity">
+                    Go back to top
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
