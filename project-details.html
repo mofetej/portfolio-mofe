@@ -40,16 +40,36 @@
 <body class="min-h-screen">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 bg-background/90 backdrop-blur-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4">
-            <div class="flex justify-end gap-8 text-sm">
-                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">About</a>
-                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">Project</a>
-                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">Education</a>
-                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">Contact</a>
-                <a href="#" class="text-[#d0d0d0] hover:text-accent transition-colors">Resume</a>
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-accent text-xl font-bold">TM</a>
+            <div class="desktop-menu hidden sm:flex gap-8 text-sm">
+                <a href="#about" class="text-[#d0d0d0] hover:text-accent transition-colors">About</a>
+                <a href="#projects" class="text-[#d0d0d0] hover:text-accent transition-colors">Projects</a>
+                <a href="#education" class="text-[#d0d0d0] hover:text-accent transition-colors">Education</a>
+                <a href="#contact" class="text-[#d0d0d0] hover:text-accent transition-colors">Contact</a>
+                <a href="/path-to-your-resume.pdf" download class="text-[#d0d0d0] hover:text-accent transition-colors">Resume</a>
+            </div>
+            <div class="mobile-menu sm:hidden">
+                <button id="menu-toggle" class="text-white">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-background z-50">
+        <div class="flex flex-col items-center justify-center h-full">
+            <a href="#about" class="text-[#d0d0d0] hover:text-accent transition-colors py-4">About</a>
+            <a href="#projects" class="text-[#d0d0d0] hover:text-accent transition-colors py-4">Projects</a>
+            <a href="#education" class="text-[#d0d0d0] hover:text-accent transition-colors py-4">Education</a>
+            <a href="#contact" class="text-[#d0d0d0] hover:text-accent transition-colors py-4">Contact</a>
+            <a href="/path-to-your-resume.pdf" download class="text-[#d0d0d0] hover:text-accent transition-colors py-4">Resume</a>
+        </div>
+        <button id="close-menu" class="absolute top-4 right-4 text-white">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
 
     <main class="pt-20">
         <!-- Back Button -->
@@ -130,6 +150,30 @@
             </div>
         </div>
     </main>
+    <script>
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
 </body>
 </html>
 

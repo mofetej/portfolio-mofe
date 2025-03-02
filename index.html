@@ -25,16 +25,15 @@
     </script>
 </head>
 <body class="min-h-screen px-4 sm:px-8 py-6">
-    <nav class="flex justify-between items-center mb-12 sm:mb-20">
-        <!-- <div class="text-accent text-xl font-bold">TM</div> -->
-        <div class="desktop-menu flex gap-8 text-sm">
+    <nav class="flex justify-end items-center mb-12 sm:mb-20">
+        <div class="desktop-menu hidden sm:flex gap-8 text-sm">
             <a href="#about" class="text-[#d0d0d0] hover:text-accent transition-colors">About</a>
             <a href="#projects" class="text-[#d0d0d0] hover:text-accent transition-colors">Projects</a>
             <a href="#education" class="text-[#d0d0d0] hover:text-accent transition-colors">Education</a>
             <a href="#contact" class="text-[#d0d0d0] hover:text-accent transition-colors">Contact</a>
             <a href="/path-to-your-resume.pdf" download class="text-[#d0d0d0] hover:text-accent transition-colors">Resume</a>
         </div>
-        <div class="mobile-menu">
+        <div class="mobile-menu sm:hidden">
             <button id="menu-toggle" class="text-white">
                 <i class="fas fa-bars"></i>
             </button>
@@ -56,14 +55,17 @@
 
     <main class="max-w-4xl mx-auto">
         <section class="mb-20 animate-fade-in">
-            <h1 class="text-accent text-4xl sm:text-5xl md:text-6xl font-bold mb-8 leading-tight">
-                TEJUMOLA<br>MOFEOLUWA
+            <h1 class="text-accent text-4xl sm:text-5xl md:text-6xl font-bold mb-12 leading-tight tracking-tight text-center sm:text-left">
+                <span class="block">TEJUMOLA</span>
+                <span class="block mt-2">MOFEOLUWA</span>
             </h1>
-            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8 mb-12">
-                <div class="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] bg-card rounded-full animate-slide-in"></div>
-                <p class="text-[#d0d0d0] max-w-xl text-center sm:text-left">
-                    I'm Tejumola Mofeoluwa – a product designer passionately crafting digital experiences and solutions
-                </p>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-12 mb-12">
+                <div class="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] bg-card rounded-full shrink-0 animate-slide-in"></div>
+                <div class="flex items-center sm:items-start flex-1">
+                    <p class="text-[#d0d0d0] text-lg text-center sm:text-left">
+                        I'm Tejumola Mofeoluwa – a product designer passionately crafting digital experiences and solutions
+                    </p>
+                </div>
             </div>
         </section>
 
